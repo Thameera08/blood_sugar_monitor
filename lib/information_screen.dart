@@ -81,6 +81,7 @@ class InformationScreen extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
+        
         title: Text('Blood Sugar Information'),
         backgroundColor: HexColor('#bcf4ff'),
       ),

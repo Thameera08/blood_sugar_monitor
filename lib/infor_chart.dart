@@ -25,6 +25,15 @@ class _ChartPageState extends State<ChartPage> {
       },
       child: Scaffold(
         appBar: AppBar(
+          leading: IconButton(
+              onPressed: () {
+                Navigator.of(context).pushReplacement(
+                  MaterialPageRoute(
+                    builder: (context) => InputScreen(),
+                  ),
+                );
+              },
+              icon: Icon(Icons.arrow_back)),
           title: Text(
             "Chart Page",
             style: TextStyle(

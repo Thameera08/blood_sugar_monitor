@@ -107,44 +107,8 @@ class _InputScreenState extends State<InputScreen> {
                                   TextStyle(color: HexColor('#003366'))),
                           keyboardType: TextInputType.number,
                         ),
-                        SizedBox(height: 20),
-                        TextField(
-                          style: const TextStyle(color: Colors.black),
-                          controller: afterMealController,
-                          decoration: InputDecoration(
-                              border: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(15.0)),
-                              labelText: 'After Meal',
-                              labelStyle:
-                                  TextStyle(color: HexColor('#003366'))),
-                          keyboardType: TextInputType.number,
-                        ),
                         SizedBox(
-                          height: 20,
-                        ),
-                      ],
-                    ),
-                  ),
-                  SizedBox(width: 20),
-                  Expanded(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        DropdownButton<DiabetesType>(
-                          isExpanded: true,
-                          dropdownColor: Color.fromARGB(255, 255, 255, 255),
-                          value: selectedDiabetesType,
-                          onChanged: (DiabetesType? newValue) {
-                            setState(() {
-                              selectedDiabetesType = newValue!;
-                            });
-                          },
-                          items: DiabetesType.values.map((DiabetesType type) {
-                            return DropdownMenuItem<DiabetesType>(
-                              value: type,
-                              child: Text(type.toString().split('.').last),
-                            );
-                          }).toList(),
+                          height: 10,
                         ),
                         SizedBox(height: 35),
                         TextField(
@@ -154,6 +118,25 @@ class _InputScreenState extends State<InputScreen> {
                               border: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(15.0)),
                               labelText: 'Age',
+                              labelStyle:
+                                  TextStyle(color: HexColor('#003366'))),
+                          keyboardType: TextInputType.number,
+                        ),
+                      ],
+                    ),
+                  ),
+                  SizedBox(width: 20),
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        TextField(
+                          style: const TextStyle(color: Colors.black),
+                          controller: afterMealController,
+                          decoration: InputDecoration(
+                              border: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(15.0)),
+                              labelText: 'After Meal',
                               labelStyle:
                                   TextStyle(color: HexColor('#003366'))),
                           keyboardType: TextInputType.number,
