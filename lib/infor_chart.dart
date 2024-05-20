@@ -110,7 +110,7 @@ class _ChartPageState extends State<ChartPage> {
   Widget _buildTableCell(String value) {
     return TableCell(
       child: Padding(
-        padding: EdgeInsets.all(10.0),
+        padding: EdgeInsets.all(20.0),
         child: Text(value),
       ),
     );
